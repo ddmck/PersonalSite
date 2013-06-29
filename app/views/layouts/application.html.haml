@@ -8,7 +8,17 @@
 
   %body
     .container
+      %br
+      
+      = render partial: "layouts/navbar"
+
+      - flash.each do |key, value|
+        .alert.box{ class: "alert-#{key}"}
+          %strong
+            = value
+          %a.close{ :data => { :dismiss => "alert" }}x
+          
       
       = yield
 
-
+      = render partial: "layouts/footer"

@@ -1,0 +1,115 @@
+@import "bootstrap";
+
+/* Universal */
+
+.center {
+  text-align: center;
+}
+
+/* typography */
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+}
+
+h1 {
+  font-size: 3em;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.7em;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: normal;
+  color: #999;
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.7em;
+}
+
+/* header */
+
+#logo {
+  float: left;
+  margin-right: 10px;
+  color: #000;
+  letter-spacing: -1px;
+  font-weight: bold;
+  line-height: 1;
+}
+
+#logo:hover {
+  color: #111;
+  text-decoration: none;
+}
+
+.navbar-inner {
+  background:none;
+  outline:none;
+  border:none;
+  box-shadow:none
+}
+
+/* footer */
+
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid #eaeaea;
+  color: #999;
+}
+
+footer a {
+  color: #555;
+}  
+
+footer a:hover { 
+  color: #222;
+}
+
+footer small {
+  float: left;
+}
+
+footer ul {
+  float: right;
+  list-style: none;
+}
+
+footer ul li {
+  float: left;
+  margin-left: 10px;
+}
+/* Hero unit */
+.hero-unit {
+  background-image:image-url("edinburgh.jpg");
+  height:500px;
+  background-height:100%;
+  background-position: center 40%;
+
+}
+
+.hero-unit h1 {
+  letter-spacing:1px;
+  text-shadow:
+    -1px -1px 0 #FFF,
+    1px -1px 0 #FFF,
+    -1px 1px 0 #FFF,
+    1px 1px 0 #FFF;
+}
+
+.hero-unit h2 {
+  letter-spacing:1px;
+  font-size:1.5em;
+  color: #000;
+  text-shadow:
+    -1px -1px 0 #FFF,
+    1px -1px 0 #FFF,
+    -1px 1px 0 #FFF,
+    1px 1px 0 #FFF;
+}
