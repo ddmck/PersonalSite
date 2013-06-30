@@ -1,4 +1,7 @@
 DOnRails::Application.routes.draw do
+  devise_for :admins
+
+  resources :portfolio
 
   root to: "static_pages#home"
 
