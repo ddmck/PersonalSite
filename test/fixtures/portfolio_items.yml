@@ -3,11 +3,11 @@
 one:
   title: MyString
   description: MyText
-  image: MyString
   link: MyString
+  github: MyString
 
 two:
   title: MyString
   description: MyText
-  image: MyString
   link: MyString
+  github: MyString

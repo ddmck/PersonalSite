@@ -1,11 +1,11 @@
 =provide :title, "Portfolio"
 
-- @items.each do |item|
+- @portfolio_items.each do |item|
   .row
     %hr.featurette-divider
     .featurette
       = image_tag "holder.js/300x200", class: "featurette-image pull-right", style: "height:200px; width:300px"
       %h2.featurette-heading.text-left= item.title
       %p.lead= item.description
-      = link_to "view source code", item.github_link, class: "btn btn-inverse"
+      = link_to "view source code", item.github, class: "btn btn-inverse"
       = link_to "view site", item.link, class: "btn btn-inverse"

@@ -1,10 +1,10 @@
-class CreatePortfolios < ActiveRecord::Migration
+class CreatePortfolioItems < ActiveRecord::Migration
   def change
-    create_table :portfolios do |t|
+    create_table :portfolio_items do |t|
       t.string :title
       t.text :description
-      t.string :image
       t.string :link
+      t.string :github
 
       t.timestamps
     end
