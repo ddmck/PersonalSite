@@ -5,7 +5,7 @@
         %ul.alert.alert-error.alert-block.unstyled
           %h4.text-left= "Form contains #{pluralize(@article.errors.count, "error")}"
           %br
-          - @barticle.errors.full_messages.each do |error|
+          - @article.errors.full_messages.each do |error|
             %li.text-left= error
 
       %p= f.text_field :title, placeholder: "Title", style: "width:100%"
@@ -14,8 +14,8 @@
       
       %p= f.text_field :tags, placeholder: "comma seperated tags", style: "width:100%"
       
-      %p= f.file_field :portfolio_image
+      %p= f.file_field :article_image
 
-      %p= f.text_field :remote_portfolio_image_url, placeholder: "Image URL"
+      %p= f.text_field :remote_article_image_url, placeholder: "Image URL"
 
       = f.submit "Create new article", class: "btn btn-inverse" 

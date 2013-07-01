@@ -1,0 +1,15 @@
+= provide :title, @article.title
+.row
+  .span6.offset2
+    %h2= @article.title
+
+    .center= image_tag(@article.article_image_url(:article), style: "width:100%; border-radius:4px")
+    %br
+
+    %p= raw(@article.body)
+    %p= @article.tags
+
+
+    - if admin_signed_in?
+      = link_to 'Edit', edit_article_path(@article)
+    = link_to 'Back', article_path 

@@ -1,0 +1,28 @@
+- if admin_signed_in?
+  = link_to "New article?", new_article_path, class: "btn btn-inverse pull-right"
+
+- if @top3.count == 3
+  %h3 The Most Popular Articles
+  .row
+    .span12
+      %ul.thumbnails
+        - @top3.each do |article| 
+          %li.span4
+            .thumbnail
+              %p.top3
+                = link_to image_tag(article.article_image_url(:thumb), class: "pic"), article_path(article)
+              = link_to article.title, article_path(article)
+              %p= "Viewed #{pluralize(article.views, 'time')}"
+          
+%h3 Recent Articles
+
+.row
+  .span12
+    %ul.thumbnails
+      - @articles.each do |article|
+        %li.span4
+          .thumbnail
+            %p.top3
+              = link_to image_tag(article.article_image_url(:thumb).to_s, class: "pic"), article_path(article)
+            = link_to article.title, article_path(article)
+            %p= "Viewed #{pluralize(article.views, 'time')}"

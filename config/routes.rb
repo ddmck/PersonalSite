@@ -1,5 +1,5 @@
 DOnRails::Application.routes.draw do
-  resources :blogs
+  resources :articles
 
 
   resources :portfolio_items

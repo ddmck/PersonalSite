@@ -1,26 +1,26 @@
-class BlogsController < ApplicationController
-  before_filter :authenticate_admin!, except: [:show, :index, :incPageView]
-  
-
+class ArticlesController < ApplicationController
+  before_filter :authenticate_admin!, except: [:index, :show, :incPageView]
+  # GET /articles
+  # GET /articles.json
   def index
-    @articles = Blog.order("created_at DESC")
-    @top3 = Blog.order("views DESC").first(3)
-    @article = Blog.new
+    @articles = Article.order("created_at DESC")
+    @top3 = Article.order("views DESC").first(3)
+    @article = Article.new
   end
 
   def show
-    @article = Blog.find(params[:id])
+    @article = Article.find(params[:id])
     incPageView(@article)
-    @comment = Comment.new
-    @comment.article_id = @article.id
+    ##@comment = Comment.new
+    ##@comment.article_id = @article.id
   end
 
   def new
-    @article = Blog.new
+    @article = Article.new
   end
 
   def create
-    @article = Blog.new(params[:article])
+    @article = Article.new(params[:article])
     @article.views = 0
     @article.save
 
@@ -29,11 +29,11 @@ class BlogsController < ApplicationController
   end
 
   def edit
-    @article = Blog.find(params[:id])
+    @article = Article.find(params[:id])
   end
 
   def update
-    @article = Blog.find(params[:id])
+    @article = Article.find(params[:id])
     @article.update_attributes(params[:article])
 
     flash.notice = "'#{@article.title}'' updated"
@@ -41,7 +41,7 @@ class BlogsController < ApplicationController
   end
 
   def destroy
-    @article = Blog.find(params[:id])
+    @article = Article.find(params[:id])
     @article.destroy
 
     flash.notice = "Successfully deleted '#{@article.title}'!"
