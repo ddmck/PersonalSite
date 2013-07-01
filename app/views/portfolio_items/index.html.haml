@@ -4,7 +4,7 @@
   .row
     %hr.featurette-divider
     .featurette
-      = image_tag "holder.js/300x200", class: "featurette-image pull-right", style: "height:200px; width:300px"
+      = image_tag item.portfolio_image_url(:thumb).to_s, class: "featurette-image pull-right"
       %h2.featurette-heading.text-left= item.title
       %p.lead= item.description
       = link_to "view source code", item.github, class: "btn btn-inverse"

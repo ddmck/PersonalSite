@@ -1,0 +1,3 @@
+ENV["AWS_ACCESS_KEY_ID"] = "AKIAJODYEOJ7MF3G5HMQ"
+ENV["AWS_SECRET_ACCESS_KEY"] = "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"
+ENV["AWS_S3_BUCKET"] = "donrails-portfolio-images"

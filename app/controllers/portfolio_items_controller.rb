@@ -6,7 +6,7 @@ class PortfolioItemsController < ApplicationController
     @portfolio_items = PortfolioItem.all
 
     respond_to do |format|
-      format.html # index.html.erb
+      format.html 
       format.json { render json: @portfolio_items }
     end
   end
@@ -14,11 +14,11 @@ class PortfolioItemsController < ApplicationController
   # GET /portfolio_items/1
   # GET /portfolio_items/1.json
   def show
-    @portfolio_item = PortfolioItem.find(params[:id])
+    @item = PortfolioItem.find(params[:id])
 
     respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @portfolio_item }
+      format.html 
+      format.json { render json: @item }
     end
   end
 
@@ -28,7 +28,7 @@ class PortfolioItemsController < ApplicationController
     @portfolio_item = PortfolioItem.new
 
     respond_to do |format|
-      format.html # new.html.erb
+      format.html 
       format.json { render json: @portfolio_item }
     end
   end
