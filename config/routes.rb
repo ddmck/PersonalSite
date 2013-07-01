@@ -1,4 +1,7 @@
 DOnRails::Application.routes.draw do
+  resources :blogs
+
+
   resources :portfolio_items
 
   devise_for :admins

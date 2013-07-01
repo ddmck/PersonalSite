@@ -1,0 +1,21 @@
+.row
+  .span5.offset2   
+    = form_for @article, html: { multipart: true } do |f|
+      - if @article.errors.any?
+        %ul.alert.alert-error.alert-block.unstyled
+          %h4.text-left= "Form contains #{pluralize(@article.errors.count, "error")}"
+          %br
+          - @barticle.errors.full_messages.each do |error|
+            %li.text-left= error
+
+      %p= f.text_field :title, placeholder: "Title", style: "width:100%"
+      
+      %p= f.text_area :body, placeholder: "Body. You may use html tags such as <p>", style: "width:100%"
+      
+      %p= f.text_field :tags, placeholder: "comma seperated tags", style: "width:100%"
+      
+      %p= f.file_field :portfolio_image
+
+      %p= f.text_field :remote_portfolio_image_url, placeholder: "Image URL"
+
+      = f.submit "Create new article", class: "btn btn-inverse" 
