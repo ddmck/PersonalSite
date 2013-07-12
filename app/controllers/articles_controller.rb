@@ -11,8 +11,8 @@ class ArticlesController < ApplicationController
   def show
     @article = Article.find(params[:id])
     incPageView(@article)
-    ##@comment = Comment.new
-    ##@comment.article_id = @article.id
+    @comment = Comment.new
+    @comment.article_id = @article.id
   end
 
   def new

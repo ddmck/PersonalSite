@@ -13,3 +13,10 @@
     - if admin_signed_in?
       = link_to 'Edit', edit_article_path(@article)
     = link_to 'Back', article_path 
+
+
+    = render partial: 'comments/form'
+    %h3= "Comments (#{@article.comments.size})"
+    %hr
+    = render partial: 'articles/comment', collection: @article.comments
+

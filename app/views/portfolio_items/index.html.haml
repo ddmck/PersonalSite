@@ -7,7 +7,9 @@
       = image_tag item.portfolio_image_url(:thumb).to_s, class: "featurette-image pull-right portfolio-img"
       %h2.featurette-heading.text-left= item.title
       %p.lead= item.description
-      = link_to "view source code", item.github, class: "btn btn-inverse"
-      = link_to "view site", item.link, class: "btn btn-inverse"
+      - unless item.github == ""
+        = link_to "view source code", item.github, class: "btn btn-inverse"
+      - unless item.link == ""  
+        = link_to "view site", item.link, class: "btn btn-inverse"    
       - if admin_signed_in?
         = link_to "Edit", edit_portfolio_item_path(item), class: "btn btn-inverse"
