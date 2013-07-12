@@ -1,0 +1,8 @@
+%h3 Post a Comment
+= form_for [ @article, @comment ] do |f|
+  %p
+    = f.text_field :name, placeholder: "Your name", style: "width:100%"
+  %p
+    = f.text_area :comment, placeholder: "Your comment", style: "width:100%; height: 200px" 
+  %p
+    = f.submit 'Submit', class: "btn btn-primary"

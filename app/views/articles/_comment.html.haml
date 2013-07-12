@@ -1,0 +1,5 @@
+%h4= "Comment by #{comment.name}"
+%p.comment= comment.comment
+%small.pull-right= "Posted #{distance_of_time_in_words(comment.created_at,Time.now)} ago"
+%br
+%hr
